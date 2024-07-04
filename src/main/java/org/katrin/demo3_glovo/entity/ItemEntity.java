@@ -7,7 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table("items")
+@Table("Items")
 @Builder
 @Data
 @AllArgsConstructor
@@ -19,6 +19,9 @@ public class ItemEntity {
     private double price;
     private int quantity;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.DETACH)
+    private OrderEntity order;
+
+    @OneToOne(cascade = CascadeType.DETACH)
     private ProductEntity product;
 }

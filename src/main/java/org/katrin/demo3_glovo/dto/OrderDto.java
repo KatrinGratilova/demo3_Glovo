@@ -5,7 +5,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.sql.Date;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -18,5 +17,5 @@ public class OrderDto {
     private String userName;
     private LocalDate checkoutDate;
     private double totalPrice;
-    private List<ItemDto> items;
+    private List<Integer> items;
 }

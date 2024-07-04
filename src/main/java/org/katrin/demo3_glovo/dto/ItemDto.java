@@ -13,5 +13,5 @@ public class ItemDto {
     private int id;
     private double price;
     private int quantity;
-    private ProductDto product;
+    private int productId;
 }
